@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+header {
+    background: #000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.banner {
+    text-align: center;
+    padding: 50px;
+    background: url('bmw-banner.jpg') no-repeat center center/cover;
+    color: white;
+    font-size: 2em;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.gallery figure {
+    background: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+.contacto {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+form {
+    max-width: 500px;
+    margin: auto;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
