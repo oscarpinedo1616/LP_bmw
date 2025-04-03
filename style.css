@@ -1,70 +1,130 @@
+/* Reset de márgenes y padding */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    text-align: center;
 }
+
+/* Header */
 header {
     background: #000;
     color: white;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* Logo en el header */
+header h1 img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Navegación */
 nav {
     background: #333;
     padding: 10px;
     text-align: center;
 }
+
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
+    font-weight: bold;
 }
-.img_logo{
-    
-}
+
+/* Banner */
 .banner {
+    position: relative;
+    height: 300px;
+    background: url('./BMW_CPO_Banner.jpg') no-repeat center center/cover; 
+    display: flex;
+    align-items: flex-start; /* Corregido 'flex-starts' */
+    justify-content: center;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 50px;
-    background: url('bmw-banner.jpg') no-repeat center center/cover;
-    color: white;
-    font-size: 2em;
 }
+
+.banner h2 {
+    font-size: 2rem;
+    background: rgba(199, 199, 199, 0.405);
+    padding: 3px 10px;
+    border-radius: 5px;
+    display: inline-block; /* Asegura que el contorno se ajuste al texto */
+}
+
+/* Galería de imágenes */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
 }
+
 .gallery figure {
+    margin: 10px;
+    text-align: center;
     background: #f4f4f4;
     padding: 10px;
-    text-align: center;
 }
+
 .gallery img {
     width: 100%;
     height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
+
+/* Contacto */
 .contacto {
     padding: 20px;
-    text-align: center;
     background: #ddd;
+    text-align: center;
 }
+
 form {
     max-width: 500px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-input, textarea {
-    width: 100%;
+
+input, textarea, button {
     padding: 10px;
-    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
+
+button {
+    background: #000;
+    color: white;
+    cursor: pointer;
+}
+
+.BMW_alvaro {
+    padding: 20px;
+    text-align: center;
+}
+.BMW_alvaro p{
+    text-align: justify;
+}
+
+/* Footer */
 footer {
     background: #000;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 10px;
 }
