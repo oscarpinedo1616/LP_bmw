@@ -22,12 +22,17 @@ header {
     justify-content: center;
 }
 
+/* Hacer que el h1 sea un contenedor flex */
+header h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre el logo y el texto */
+}
+
 /* Logo en el header */
 header h1 img {
     height: 40px;
-    margin-right: 10px;
 }
-
 /* Navegación */
 nav {
     background: #333;
