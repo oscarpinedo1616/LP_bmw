@@ -1,23 +1,43 @@
+/* Reset de márgenes y padding */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    line-height: 1.6;
     text-align: center;
 }
 
+/* Header */
 header {
     background: #000;
     color: white;
-    padding: 15px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Hacer que el h1 sea un contenedor flex */
+header h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre el logo y el texto */
+}
+
+/* Logo en el header */
+header h1 img {
+    height: 40px;
+}
+/* Navegación */
 nav {
     background: #333;
     padding: 10px;
+    text-align: center;
 }
 
 nav a {
@@ -27,15 +47,17 @@ nav a {
     font-weight: bold;
 }
 
+/* Banner */
 .banner {
     position: relative;
     height: 300px;
-    background: url('./BMW_CPO_Banner.jpg') no-repeat center center/cover; 
+    background: url('./BMW_CPO_Banner.jpg') no-repeat center center/cover;
     display: flex;
-    align-items: flex-start; /* Corregido 'flex-starts' */
+    align-items: flex-start; /* Alinea el texto a la parte superior */
     justify-content: center;
     color: rgb(0, 0, 0);
     text-align: center;
+    padding: 50px;
 }
 
 .banner h2 {
@@ -43,24 +65,29 @@ nav a {
     background: rgba(199, 199, 199, 0.405);
     padding: 3px 10px;
     border-radius: 5px;
+    margin-top: -30px;
     display: inline-block; /* Asegura que el contorno se ajuste al texto */
 }
+
 /* Galería de imágenes */
 .gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
 .gallery figure {
     margin: 10px;
     text-align: center;
+    background: #e1e1e1;
+    padding: 10px;
+    border-radius: 4%;
 }
 
 .gallery img {
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -68,11 +95,12 @@ nav a {
 /* Contacto */
 .contacto {
     padding: 20px;
-    background: #f4f4f4;
+    background: #ddd;
+    text-align: center;
 }
 
 form {
-    max-width: 400px;
+    max-width: 500px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -92,16 +120,28 @@ button {
     cursor: pointer;
 }
 
-/* Sección personalizada */
 .BMW_alvaro {
-    height: 200px;
-    background: url('bmw_alvaro.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+.BMW_alvaro p{
+    text-align: justify;
 }
 
+.BMW_alvaro h2 {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    font-size: 1.9rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
