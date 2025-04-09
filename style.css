@@ -179,6 +179,16 @@ button {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
+#bmw1 {
+    border-radius: 5%;
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 
 /* Footer */
 footer {
@@ -187,3 +197,64 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+
+.header-extra-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: #111; 
+    border-radius: 8px;
+    margin: 10px auto;
+    max-width: 800px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .header-extra-info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f0f0f0;
+  }
+  
+  .header-extra-info-icon {
+    font-size: 1.4rem;
+    color: #ffcc00; 
+  }
+  
+  .header-extra-info-text label {
+    font-size: 0.75rem;
+    color: #aaa;
+    display: block;
+  }
+  
+  .header-extra-info-text strong {
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: block;
+  }
+  
+  .header-extra-info-text a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .header-extra-info-text a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 600px) {
+    .header-extra-info {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .header-extra-info-item {
+      width: 100%;
+    }
+  }
